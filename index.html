@@ -809,6 +809,138 @@
 
     .contact-link-val { font-weight: 500; font-size: 0.9rem; }
 
+    /* ─── RESUME ─── */
+    #resume {
+      padding: 6rem 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .resume-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .resume-left { display: flex; flex-direction: column; gap: 1.5rem; }
+
+    .resume-download-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .resume-name {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: var(--text);
+    }
+
+    .resume-role-tag {
+      font-size: 0.82rem;
+      color: var(--accent);
+      background: rgba(79,143,255,0.1);
+      border: 1px solid rgba(79,143,255,0.2);
+      padding: 0.25rem 0.75rem;
+      border-radius: 100px;
+      display: inline-block;
+      width: fit-content;
+    }
+
+    .resume-meta-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .resume-meta-list li {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .resume-meta-list li span.ico { font-size: 0.9rem; }
+
+    .resume-btns {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .resume-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .resume-highlight-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.2rem 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: transform 0.25s, border-color 0.25s;
+    }
+
+    .resume-highlight-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(79,143,255,0.25);
+    }
+
+    .rh-icon {
+      font-size: 1.3rem;
+      width: 40px;
+      height: 40px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .rh-label {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .rh-value {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--text);
+    }
+
+    .resume-preview {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+
+    .resume-preview iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .resume-wrapper { grid-template-columns: 1fr; }
+    }
+
     /* ─── FOOTER ─── */
     footer {
       position: relative;
@@ -872,12 +1004,13 @@
   <!-- ─── NAVBAR ─── -->
   <nav>
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo">RT<span>.</span>dev</a>
+      <a href="." class="nav-logo">RT<span>.</span>dev</a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#education">Education</a></li>
+        <li><a href="#resume">Resume</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="mailto:rishabh.tiwari.fs@gmail.com" class="nav-cta">Hire me →</a></li>
       </ul>
@@ -902,6 +1035,7 @@
           </p>
           <div class="hero-btns">
             <a href="#projects" class="btn btn-primary">View my work</a>
+            <a href="resume.pdf" download="Rishabh_Tiwari_Resume.pdf" class="btn btn-ghost">Download CV ↓</a>
             <a href="https://linkedin.com/in/rishabh-tiwari-dev" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn ↗</a>
             <a href="https://github.com/rishabhtiwari-dev" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
           </div>
@@ -1203,6 +1337,73 @@
             </div>
           </a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── RESUME ─── -->
+  <section id="resume">
+    <div class="container">
+      <div class="fade-up">
+        <span class="section-tag">My Resume</span>
+        <h2 class="section-title">Curriculum Vitae</h2>
+      </div>
+      <div class="resume-wrapper">
+
+        <div class="resume-left fade-up">
+          <div class="resume-download-card">
+            <div>
+              <div class="resume-name">Rishabh Tiwari</div>
+              <div class="resume-role-tag">Full Stack Developer</div>
+            </div>
+            <ul class="resume-meta-list">
+              <li><span class="ico">📧</span>rishabh.tiwari.fs@gmail.com</li>
+              <li><span class="ico">📞</span>+91 7724046841</li>
+              <li><span class="ico">📍</span>HSR Layout, Bengaluru</li>
+              <li><span class="ico">💼</span>linkedin.com/in/rishabh-tiwari-dev</li>
+            </ul>
+            <div class="resume-btns">
+              <a href="resume.pdf" download="Rishabh_Tiwari_Resume.pdf" class="btn btn-primary">Download PDF ↓</a>
+              <a href="resume.pdf" target="_blank" rel="noopener" class="btn btn-ghost">View Full ↗</a>
+            </div>
+          </div>
+
+          <div class="resume-highlights">
+            <div class="resume-highlight-card">
+              <div class="rh-icon">🏢</div>
+              <div>
+                <div class="rh-label">Current Company</div>
+                <div class="rh-value">Opland Technologies Pvt. Ltd.</div>
+              </div>
+            </div>
+            <div class="resume-highlight-card">
+              <div class="rh-icon">💼</div>
+              <div>
+                <div class="rh-label">Role</div>
+                <div class="rh-value">Full Stack Developer · Mar 2025 – Present</div>
+              </div>
+            </div>
+            <div class="resume-highlight-card">
+              <div class="rh-icon">🎓</div>
+              <div>
+                <div class="rh-label">Education</div>
+                <div class="rh-value">B.Tech ECE · CGPA 7.8 · OIST, MP</div>
+              </div>
+            </div>
+            <div class="resume-highlight-card">
+              <div class="rh-icon">⏱️</div>
+              <div>
+                <div class="rh-label">Experience</div>
+                <div class="rh-value">1.5+ Years · Full Stack Development</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-preview fade-up" style="transition-delay:0.1s">
+          <iframe src="resume.pdf#toolbar=0&navpanes=0" title="Rishabh Tiwari Resume"></iframe>
+        </div>
+
       </div>
     </div>
   </section>
